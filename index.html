@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuitMedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="banner" id="parallax-banner">
+        <div class="parallax-container">
+            <img src="asset/Kerja1.jpeg" alt="Banner Image" class="parallax-image" id="bannerImage">
+        </div>
+        <div class="content">
+            <h1>Ideas</h1>
+            <p>Where all great things begin</p>
+        </div>
+    </div>
+
+    <nav>
+        <input type="checkbox" name="" id="nav-button">
+        <label for="nav-button">&#9776</label>
+        <div class="Logo">
+            <img src="asset/Logo2.png" alt=""> 
+        </div>
+        <ul>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Ideas</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="controls">
+        <div class="control-group">
+            <p>Show Per Page</p>
+            <select id="showPerPage">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <p>Sort By</p>
+            <select id="sortBy">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="paginationInfo"></div>  
+
+    <div class="card-container" id="cardContainer"></div>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include your separated JS file -->
+    <script src="script.js"></script>
+</body>
+</html>

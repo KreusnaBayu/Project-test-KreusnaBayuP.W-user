@@ -1,0 +1,277 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-inline-end: 30px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+}
+
+.control-group p {
+    margin-right: 10px;
+    font-size: small;
+}
+
+.controls select {
+    width: 90px; /* Sesuaikan dengan lebar yang diinginkan */
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-card {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: scale(1.05);
+}
+
+.post-thumbnail {
+    width:100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 40px); /* Tiga card berada sebelahan dengan margin 20px */
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+/* Sesuaikan gaya tampilan Anda di sini */
+.post-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.post-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.parallax-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: skewY(-5deg);
+    transform-origin: 0;
+}
+
+.parallax-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    background-color: #F26F37 ;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.Logo {
+    font-size: 1.rem;
+    width: 30%;
+    position: relative;
+    top: -10px;
+    display: flex;
+    align-items: center;
+}
+
+.Logo img {
+    padding-top: 20px;
+    width: 120px;
+}
+
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    padding: 0px 5px;
+    transition: 0.15s;
+}
+
+nav a:hover{
+    color: orangered;
+}
+
+#nav-button {
+    display: none;
+
+}
+
+label{
+    display: none;
+}
+
+/* Responsive */
+
+@media only screen and (max-width:736px) and (orientation:portrait){
+
+    nav{
+        align-items: center;
+    }
+
+    nav .logo{
+        width: 30%;
+        position: absolute;
+        left: 0px;
+    }
+
+    nav .logo img{
+        padding-top: 20px;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 44px;
+        width: 100%;
+        background: darkorange;
+        max-height: 0;
+        overflow: hidden;
+    }
+    nav li{
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+
+    nav a{
+        width: 100%;
+        color: rgb(0, 0, 0);
+        display: block;
+
+    }
+
+    nav li:hover {
+        background: darkorange;
+    }
+
+    label {
+        display: block;
+        padding: 0px 10px;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 2%;
+    }
+
+    label:hover {
+        color: white;
+    }
+
+    nav #nav-button:checked~ul {
+        max-height: 100%;
+        transition: all 1s ease-out;
+    }
+
+
+
+}
